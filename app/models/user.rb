@@ -6,4 +6,6 @@ class User < ApplicationRecord
     presence: true,
     format: { with: /\A[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-_]+\.[a-zA-Z]+\z/ },
     uniqueness: { case_sensitive: false }
+
+  has_secure_password
 end
